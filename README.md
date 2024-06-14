@@ -79,13 +79,8 @@ Aprox $250 pesos un servidor el día entero.
 
 Ya sea que esté comenzando con Oracle Cloud Infrastructure o migrando todo su centro de datos a él, podemos ayudarlo en su viaje hacia la nube. Eso es todo. OCI, una plataforma en la nube amplia y profunda.
 
--  Tips y recomendaciones para el exámen
--  IAM
--  Networking
--  Compute
--  Storage
--  Database
--  Security
--  Gobernanza y Administración
+![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/a16807b7-b51d-4c6c-a146-48ee970de33a)
+
+
   
 
