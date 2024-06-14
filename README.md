@@ -27,13 +27,26 @@ Servicios de aplicaciones.
 
 Pero primero, la base de cualquier plataforma en la nube es la huella global de las regiones. Tenemos muchas regiones generalmente disponibles en el mundo, junto con soporte multinube con Microsoft Azure y una oferta híbrida diferenciada llamada Dedicated Region Cloud@Customer.
 
-Contamos con elementos básicos sobre esta huella global: las siete categorías que acabamos de mencionar. En la parte inferior, tenemos las primitivas centrales: computación, almacenamiento y redes. Los servicios informáticos cubren máquinas virtuales, servidores bare metal, contenedores, un servicio Kubernetes administrado y un servicio VMware administrado.
+Contamos con elementos básicos sobre esta huella global: las siete categorías que acabamos de mencionar. En la parte inferior, tenemos las primitivas centrales: computación, almacenamiento y redes. Los servicios informáticos cubren máquinas virtuales, servidores real de metal, contenedores, un servicio **Kubernetes** administrado y un servicio VMware administrado.
 
 Estos servicios sirven principalmente para realizar cálculos, ejecutar lógica y ejecutar aplicaciones. El almacenamiento en la nube incluye discos conectados a máquinas virtuales, almacenamiento de archivos, almacenamiento de objetos, almacenamiento de archivos y servicios de migración de datos. OCI ofrece una gama completa de servicios de almacenamiento para que usted almacene, acceda, gobierne y analice sus datos estructurados o no estructurados.
 
-Las funciones de red le permiten configurar redes privadas definidas por software en Oracle Cloud. OCI proporciona el conjunto más amplio y completo de servicios de red con la mayor confiabilidad, la mayoría de las funciones de seguridad y el mayor rendimiento. Luego tenemos los servicios de bases de datos. Contamos con múltiples tipos de servicios de bases de datos, tanto Oracle como de código abierto.
+Las funciones de red le permiten configurar redes privadas definidas por software en Oracle Cloud. OCI proporciona el conjunto más amplio y completo de servicios de red con la mayor confiabilidad, la mayoría de las funciones de seguridad y el mayor rendimiento.
 
-Somos la única nube que ejecuta bases de datos autónomas y múltiples versiones de ellas, incluidos OLTP, OLAP y JSON. Y luego puede ejecutar bases de datos en máquinas virtuales, servidores bare metal o incluso Exadata en la nube. También puede ejecutar bases de datos de código abierto como MySQL y NoSQL en Oracle Cloud Infrastructure.
+![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/a7362ea4-9d8d-4dd0-a17a-aeb032fa5c88)
+
+Luego tenemos los servicios de bases de datos. Contamos con múltiples tipos de servicios de bases de datos, tanto Oracle como de código abierto.
+
+Somos la única nube que ejecuta bases de datos autónomas y múltiples versiones de ellas, incluidos OLTP, OLAP y JSON.
+
+OLTP: Online **Transacction** proccess.
+
+OLAP: Online **Analitical** proccess. 
+
+JSON: 
+
+
+Y luego puede ejecutar bases de datos en máquinas virtuales, servidores bare metal o incluso Exadata en la nube. También puede ejecutar bases de datos de código abierto como MySQL y NoSQL en Oracle Cloud Infrastructure.
 
 Servicios de datos e inteligencia artificial. Tenemos un servicio administrado de Apache Spark llamado flujo de datos, un servicio administrado para rastrear artefactos de datos en OCI llamado catálogo de datos y un servicio administrado para la ingesta de datos y ETL llamado integración de datos. También contamos con una plataforma de ciencia de datos administrada para modelos y capacitación de aprendizaje automático. También contamos con un servicio Apache Kafka administrado para casos de uso de transmisión de eventos.
 
