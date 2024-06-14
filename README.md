@@ -43,26 +43,42 @@ OLTP: Online **Transacction** proccess.
 
 OLAP: Online **Analitical** proccess. 
 
-JSON: 
+JSON: Almacenar diccionarios llave: valor
 
 
 Y luego puede ejecutar bases de datos en máquinas virtuales, servidores bare metal o incluso Exadata en la nube. También puede ejecutar bases de datos de código abierto como MySQL y NoSQL en Oracle Cloud Infrastructure.
 
-Servicios de datos e inteligencia artificial. Tenemos un servicio administrado de Apache Spark llamado flujo de datos, un servicio administrado para rastrear artefactos de datos en OCI llamado catálogo de datos y un servicio administrado para la ingesta de datos y ETL llamado integración de datos. También contamos con una plataforma de ciencia de datos administrada para modelos y capacitación de aprendizaje automático. También contamos con un servicio Apache Kafka administrado para casos de uso de transmisión de eventos.
+![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/aec7eee7-6589-40c4-ba96-8f37fe757e6b)
 
-Luego tenemos los servicios de gobernanza y administración. Estos servicios incluyen seguridad, identidad y observabilidad y gestión. Contamos con características únicas, como compartimentos, que facilitan operativamente la gestión de entornos grandes y complejos.
+EXADATA:  Servicio automatizado de bases de datos que permite ejecutar datos con maoyr rendimiento y disponibilidad con máxima seguridad
+
+ETL: Extract Transform Load
+
+Servicios de datos e inteligencia artificial. Tenemos un servicio administrado de Apache Spark llamado flujo de datos, un servicio administrado para rastrear artefactos de datos en OCI llamado catálogo de datos y un servicio administrado para la ingesta de datos y ETL llamado integración de datos. También contamos con una plataforma de ciencia de datos administrada para modelos y entrenamiento de aprendizaje automático. También contamos con un servicio Apache Kafka administrado para casos de uso de transmisión de eventos.
+
+En otras palabras OCI tiene todos los servicios para ciencias de datos e inteligencia artificial.
+
+Luego tenemos los servicios de gobernanza y administración. Estos servicios incluyen seguridad, identidad y observabilidad y gestión. Contamos con características únicas, como **compartimentos**, que facilitan operativamente la gestión de entornos grandes y complejos.
 
 La seguridad está integrada en todos los aspectos de OCI, ya sea detección o corrección automática, lo que normalmente llamamos gestión de la postura de seguridad en la nube, protección sólida de la red o cifrado de forma predeterminada. Contamos con una plataforma integrada de observabilidad y gestión con funciones como registro, análisis de registros y gestión del rendimiento de aplicaciones, y mucho más.
 
-Luego tenemos un montón de servicios para desarrolladores. Tenemos un servicio local administrado llamado APEX, varios otros servicios para desarrolladores y un servicio Terraform administrado llamado administrador de recursos. Para análisis, contamos con un servicio de análisis administrado llamado Oracle Analytics Cloud que se integra con varias soluciones de terceros.
+![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/e24c726e-7146-4ab0-9c9e-3359a6949827)
+
+Luego tenemos un montón de servicios para desarrolladores. Tenemos un servicio local administrado llamado APEX, varios otros servicios para desarrolladores y un servicio **Terraform** administrado llamado administrador de recursos. Para análisis, contamos con un servicio de análisis administrado llamado Oracle Analytics Cloud que se integra con varias soluciones de terceros.
+
+![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/91340f7c-8b3a-421a-9ec3-d472445d5def)
+
 
 En servicios de aplicaciones, tenemos una oferta administrada sin servidor llamada funciones y API Gateway, y un servicio de eventos para ayudarlo a crear microservicios y arquitecturas basadas en eventos. Contamos con un conjunto completo de SaaS conectado en todo su negocio, finanzas, recursos humanos, cadena de suministro, fabricación, publicidad, ventas, servicio al cliente y marketing, todo funcionando en OCI.
 
-Esa es una lista larga. Y estas siete categorías y los servicios mencionados representan sólo una pequeña fracción de los más de 80 servicios disponibles actualmente en OCI. Afortunadamente, es rápido y fácil probar un nuevo servicio utilizando nuestra cuenta gratuita líder en la industria. Somos la primera nube que ofrece un servidor por solo un centavo por hora central.
+SaaS: Modelo de Software de la nube que ofrece aplicaciones finales a los usuarios a través de un navegador de internet. Por ejemplo: Mail, Correo, Zoom, Netflix, Instagram, Google Sheets, etc. 
 
-Ya sea que esté comenzando con Oracle Cloud Infrastructure o migrando todo su centro de datos a él, podemos ayudarlo en su viaje hacia la nube. Eso es todo. OCI, una plataforma en la nube amplia y profunda. Gracias por ver.
-Send feedback
-Translation results available
+Esa es una lista larga. Y estas siete categorías y los servicios mencionados representan sólo una pequeña fracción de los más de **80 servicios disponibles actualmente en OCI**. Afortunadamente, es rápido y fácil probar un nuevo servicio utilizando nuestra cuenta gratuita líder en la industria. Somos la primera nube que ofrece un servidor por solo un centavo por hora central.
+
+Aprox $250 pesos un servidor el día entero.
+
+Ya sea que esté comenzando con Oracle Cloud Infrastructure o migrando todo su centro de datos a él, podemos ayudarlo en su viaje hacia la nube. Eso es todo. OCI, una plataforma en la nube amplia y profunda.
+
 -  Tips y recomendaciones para el exámen
 -  IAM
 -  Networking
