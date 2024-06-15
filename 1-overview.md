@@ -71,10 +71,9 @@ Ya sea que esté comenzando con Oracle Cloud Infrastructure o migrando todo su c
 
 ![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/a16807b7-b51d-4c6c-a146-48ee970de33a)
 
-
 ## OCI Arquitectura
 
-Bienvenido a esta lección sobre arquitectura OCI. En esta lección, cubriremos las tópicos centrales de la arquitectura física de OCI, comenzando con las regiones.
+En esta lección, cubriremos las tópicos centrales de la arquitectura física de OCI, comenzando con las Regiones.
 
 **Una región es un área geográfica** localizada que consta de uno o más dominios de disponibilidad. Los dominios de disponibilidad son uno o más centros de datos tolerantes a fallos ubicados dentro de una región pero conectados entre sí mediante una red de baja latencia y gran ancho de banda.
 
@@ -95,9 +94,7 @@ Así que veamos cada uno de ellos con un poco más de detalle.
 
 Dominio de disponibilidad. Los dominios de disponibilidad están aislados entre sí, son tolerantes a fallos y es muy poco probable que fallen simultáneamente. Debido a que los dominios de disponibilidad no comparten infraestructura física, como energía o refrigeración o la red interna, es poco probable que una falla que afecte a un dominio de disponibilidad afecte la disponibilidad de otros.
 
-
 ![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/51f7349c-67bd-4cb2-b463-79f9a5373bd6)
-
 
 Como puede ver en este gráfico, una región en particular tiene tres dominios de disponibilidad. Un dominio de disponibilidad tiene algún tipo de interrupción y no está disponible. Pero los otros dos dominios de disponibilidad todavía están en funcionamiento.
 
@@ -106,9 +103,7 @@ Piense en que cada dominio de disponibilidad tiene tres dominios de error. Así 
 
 Entonces, la idea es colocar los recursos en diferentes dominios de error. Y no comparten un único punto de falla de hardware, como servidores físicos, bastidores físicos, conmutadores en la parte superior del bastidor o unidades de distribución de energía. Puede obtener alta disponibilidad aprovechando los dominios de falla.
 
-
 ![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/311ec1ee-7856-4a3c-87ee-3026739c1960)
-
 
 También aprovechamos los dominios de falla para nuestros propios servicios. Entonces, en cualquier región, los recursos en ese dominio de falla se cambian activamente en cualquier momento. Esto significa que los problemas de disponibilidad causados ​​por los procedimientos de cambio se aíslan en el nivel del dominio de error. Y además, puede controlar la ubicación de las instancias de la base de datos de su computadora en el dominio remoto en el momento del lanzamiento de la instancia. Para que pueda especificar qué dominio de error desea utilizar.
 
@@ -118,12 +113,9 @@ También aprovechamos los dominios de falla para nuestros propios servicios. Ent
 
 ![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/1da50195-1fd9-41db-a465-ad94303f043b)
 
-
 Debe hacer lo mismo cuando diseñe su propia arquitectura. Así que veamos un ejemplo. Tienes una región. Tienes un dominio de disponibilidad. Y como dijimos, un AD (Availability Domain) tiene tres dominios de falla (dominos de errors). Entonces ves esos dominios de falla aquí.
 
-
 ![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/cb5017b5-b901-4c9f-9340-d5653d9d3db2)
-
 
 Entonces, lo primero que debe hacer es cuando crea una aplicación, crea esta red virtual definida por software. Y luego digamos que es una aplicación muy simple. Tienes un nivel de aplicación. Tienes un nivel de base de datos. Entonces, lo primero que puede hacer es ejecutar varias copias de su aplicación.
 
@@ -134,3 +126,53 @@ Ahora, para pasar al siguiente paso, podría replicar el mismo diseño en otro d
 Por lo tanto, podría utilizar varias tecnologías, como Oracle Data Guard, para asegurarse de que los datos principales y de reserva se mantengan sincronizados . Y así podrás diseñar tu arquitectura.
 
 **Data Guard** Asegura que los datos principales y de reserva se mantengan sincronizados.
+
+## Nube distribuida
+
+Veamos OCI Distributed Cloud (Nube Distribuida) en esta lección. 
+
+Un aspecto único de Oracle Cloud es el hecho de que está distribuida, lo que significa que los clientes pueden obtener los servicios de Oracle Cloud de muchas maneras diferentes. Ofrece flexibilidad y elección excepcionales.
+
+**Nube pública normal**: Los clientes pueden obtener nuestros servicios a través de nuestras regiones de nube pública: **más de 41 regiones globales en todo el mundo** con todos los beneficios de **seguridad, confiabilidad y escalabilidad**. 
+
+**Nube híbrida**: También pueden obtener servicios y capacidades de nube locales a través de nuestras ofertas híbridas como Exadata Cloud@Customer.
+
+**Nube privada**: Toda la cartera de servicios de nube a través de nuestra región dedicada y nuestra nube dedicada.
+
+**Multi Nube**: Más de un proveedor de nube y que pueden aprovechar lo mejor de los servicios de nube a través de nuestras ofertas multinube
+
+En esta lección, analizaremos la **nube híbrida** y la **multinube** con mucho más detalle.
+
+![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/1a41925e-c608-4d2b-94d8-a855394bc2e3)
+
+### Nube híbrida.
+
+La primera oferta que tenemos es la **Región Dedicada Cloud@Customer**, que son nuestras regiones privadas aisladas. 
+
+Luego tenemos un servicio, que se llama **Oracle Cloud VMware Solution**. Y aquí lo que hacemos es proporcionar un entorno basado en VMware en OCI mediante el cual puede **migrar máquinas virtuales locales a la nube** sin problemas.
+
+Luego tenemos la **base de datos autónoma en Exadata Cloud@Customer**. Y la idea aquí es que todas las capacidades avanzadas de base de datos autónoma estén disponibles en su propio entorno local. Y finalmente, tenemos una oferta llamada **Roving Edge Infrastructure**, que es básicamente un servidor portátil, optimizado para computación y almacenamiento, que ha sido reforzado para **operar en entornos remotos y austeros**. Y esto es bueno para casos de uso en los que desea procesar datos y realizar cálculos en lugares remotos y desconectados (Edge: borde).
+
+![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/2579ad9e-6f1d-49ba-9efa-6752118eaccf)
+
+Veamos la región dedicada Cloud@Customer con un poco más de detalle. Bueno, esta oferta proporciona todos los **más de 100 servicios de nube pública de OCI en una región de nube independiente y autónoma en la ubicación física que usted elija**. En el centro de datos de su elección. Esta región puede desconectarse completamente de la red exterior. Los clientes pueden empezar poco a poco y escalar hasta más de **450 racks** muy rápidamente.
+
+![imagen](https://github.com/sbstn-jmnz/OCI-fundations/assets/4334071/e4e761b6-295c-4dbc-aa6f-3c60af94f0e4)
+
+Oracle instalará, operará, brindará soporte y actualizará a cada región dedicada de la misma manera que mantenemos las regiones de nube pública en todo el mundo. Hay dos casos de uso. 
+
+**Uno es que la residencia de datos cumpla con sus requisitos de gobernanza, cumplimiento normativo y privacidad de datos para datos confidenciales**. 
+
+Y también **se puede utilizar para ejecutar aplicaciones sensibles a la latencia**. Estas son algunas de nuestras ofertas de nube híbrida, incluida la región dedicada Cloud@Customer.
+
+
+Cambiemos de rumbo y veamos algunas de nuestras **ofertas multinube**. Entonces, lo primero aquí es esta OCI Azure Interconnect que se lanzó en 2019. Entonces, la idea aquí es que **Oracle y Microsoft tienen una interconexión privada entre ellos**. Y hoy tenemos 12 regiones en todo el mundo, como pueden ver en esta diapositiva, donde esta interconexión está disponible.
+
+Y si... esta es una **interconexión privada**, lo que significa que la **latencia es muy baja**, **menos de 2 milisegundos de latencia**. Y el precio de esta oferta se basa únicamente en los puertos y los circuitos que usted proporciona en ambos lados, y no hay ningún cargo por el ancho de banda (entrante o saliente) consumido. Entonces, el caso de uso aquí sería ejecutar una base de datos en Oracle, ejecutar aplicaciones aquí en Azure y ejecutarlas sin problemas debido a esta baja latencia privada para la interconexión privada.
+
+Luego, en 2022, llevamos esta oferta un nivel más alto y creamos esta base de datos Oracle: lanzamos este servicio de base de datos Oracle para Azure. Y la idea aquí es que sea un servicio administrado por Oracle para que los clientes de Azure proporcionen acceso y operen Servicios de Base de Datos Oracle (Servicios de Base de Datos en OCI con una experiencia familiar similar a la de Azure).
+
+Entonces, con solo unos pocos clics, los clientes pueden conectar su suscripción de Azure al arrendamiento de OCI y el servicio configura automáticamente todo lo necesario para vincular los dos entornos de nube. **Entonces, la principal diferencia entre esto y la interconexión OCI Azure es, como pueden ver aquí, la parte de interconexión, no es necesario implementarla manualmente**. El servicio lo automatiza. Por lo tanto, esto requiere un enfoque basado en servicios en comparación con un enfoque manual de configuración de la interconexión.
+
+Y, por último, el servicio también envía métricas, registros y eventos para la base de datos OCI que usted suministra a las herramientas de Azure. Entonces obtienes esta telemetría y monitoreo unificados donde puedes ver todos los paneles y todos los servicios que están disponibles.
+
