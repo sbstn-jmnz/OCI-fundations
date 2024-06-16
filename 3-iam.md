@@ -113,4 +113,41 @@ Al igual que los compartimentos, **los dominios de identidad** son contenedores 
 Entonces, la forma en que se usa es, digamos, que tengo un compartimiento sandbox con fines de prueba. Por lo tanto, podría tener una configuración seleccionada de usuarios y grupos que participan en esta prueba y podría mantenerlos en este dominio de identidad también sandbox.
 
 Y una vez que ya no los use, puedo eliminar todos estos subgrupos de usuarios. Es una buena manera de segregar usuarios, grupos y configuración de seguridad.
-|
+
+## AuthN y AuthZ
+
+Veamos qué es un principal. Un principal es una entidad de IAM a la que se le permite interactuar con los recursos de OCI. Hay dos tipos de directores principalmente en OCI. Uno son tus usuarios. Piense en las personas que inician sesión en su consola o utilizan su CLI o usuarios de SDK, seres humanos que realmente utilizan sus recursos en la nube. Y entonces los propios recursos pueden ser directores.
+
+Entonces, un buen ejemplo de un principal de recurso es un principal de instancia, que en realidad es una instancia que se convierte en principal, lo que significa que puede realizar llamadas API contra otros servicios OCI como el almacenamiento. También cuando hablamos de directores, tenemos grupos.
+
+Y los grupos son básicamente una colección de usuarios que tienen el mismo tipo de requisitos de acceso a los recursos. Entonces puedes tener un grupo de administración de almacenamiento donde puedes agrupar a todos los seres humanos que son administradores de almacenamiento y así sucesivamente.
+
+Entonces, veamos algunos de los detalles comenzando con la autenticación. A la autenticación a veces también se la denomina AuthN. Como resumimos de la lección anterior, la autenticación consiste básicamente en descubrir: ¿eres quien dices ser? Y la forma más fácil de entender esto es que todos lidiamos con esto a diario. Cuando visita un sitio web y proporciona su nombre de usuario y contraseña para acceder a parte del contenido, está siendo autenticado.
+
+Hay otras formas de realizar la autenticación. Lo común para la nube son las claves de firma de API. Entonces, cuando realiza llamadas API, ya sea que esté usando el SDK o la CLI (terminal de comandos), debe usar las claves de firma de API que utilizan un par de claves públicas privadas para firmar estas llamadas API y autenticar estas llamadas API.
+
+Utiliza un par de claves RSA, como puede ver aquí, con una clave pública y una privada. También existe una tercera forma de realizar la autenticación y se basa en tokens de autenticación. Y estas son cadenas de tokens generadas por Oracle. Y la idea aquí es que se pueden autenticar API de terceros, que no admiten el modelo de autenticación OCI.
+
+Entonces, en este ejemplo, mostramos un ADW, llamando a un ADW, llamada a la API de almacén de datos autónomo donde usamos estos tokens de autenticación. Aún así se sigue su identidad. Estos tokens de autenticación se pueden utilizar para este propósito.
+
+Ahora veamos muy rápidamente la autorización. Entonces, la autorización se ocupa de los permisos y de determinar qué permisos tienes. En OCI, la autorización se realiza a través de lo que llamamos políticas IAM. Y las políticas, piense en ellas como declaraciones legibles por humanos para definir permisos granulares. Así que aquí tienes un par de ejemplos. Y la sintaxis de las políticas es siempre algo similar.
+
+En la siguiente diapositiva, hablaré un poco más sobre lo que significa esta afirmación. Recuerde, las pólizas se pueden adjuntar a un compartimento o a un arrendamiento. Si están vinculados a un arrendamiento, se aplica a todo lo que esté dentro de ese arrendamiento. Si se aplica a un compartimento, se aplica únicamente a los recursos dentro de ese compartimento.
+
+```
+Allow group developers to create virtual-machines in tenancy
+
+Allow grupo security to manage virual-machines in compartment sandbox where creation-date > 01/05/2024
+```
+
+Entonces, ¿cómo se realiza AuthZ en OCI? Hablamos de políticas. ¿Cómo se ve la sintaxis? Como puede ver aquí, la sintaxis es siempre: siempre debe comenzar con un permiso. Todo está denegado por defecto. Así que realmente no es necesario escribir una declaración de denegación. Entonces dices Permitir nombre_grupo.
+
+Un grupo es básicamente una colección de usuarios. **Por lo tanto, no puede intentar establecer políticas sobre usuarios individuales**. Siempre operas a nivel de grupo. Para hacer algo, hay un verbo. En algunos recursos, hay un tipo de recurso. Y hay una ubicación. La ubicación puede ser un arrendamiento. La ubicación puede ser un compartimento. Y puedes hacer que estas políticas sean realmente complejas agregando condiciones (where). Y nuevamente, curso de fundamentos. Así que no vamos a entrar en muchos de estos temas complejos. Pero realmente se podrían redactar políticas complejas.
+
+Entonces, solo para darle una idea de cómo podrían verse los verbos, hay cuatro niveles de verbos. Hay una gestión. Hay un uso. Hay una lectura. Y hay una inspección. Entonces, administrar básicamente significa que puedes administrar todos los recursos. Usar básicamente significa que puedes leer. Pero no se podían hacer cosas como actualizar y eliminar, etc., etc. Y puedes leer más en la documentación.
+
+El tipo de recurso básicamente puede ser todos los recursos, es decir, todo lo que hay en su cuenta, o pueden ser recursos informáticos, recursos de bases de datos, etc., todos los recursos que tiene. Ahora, podrían operar a nivel familiar, es decir, todas las entidades dentro de esa familia de recursos, o incluso podrían ser muy granulares. Entonces se podría decir que en computación, solo quiero que alguien opere en las instancias pero no trabaje en las imágenes de las instancias.
+
+Entonces realmente podrías hacer eso. Así es como se redactaría una política. Hay algunas excepciones a esta regla. Hay políticas que usted escribiría para servicios y demás. Pero nuevamente, es una puntuación básica, por lo que no entraremos en esos detalles avanzados. Normalmente, así es como se haría una transición en OCI.
+
+Para concluir, vimos cómo se realiza la autenticación en OCI, los tres mecanismos, el usuario nombre, contraseñas, claves de firma de API, tokens de autenticación. Y luego analizamos cómo se realiza la autorización en OCI a través de políticas. Las políticas son realmente poderosas. Son muy fáciles de entender y legibles por humanos. Pero al mismo tiempo, le brindan muchas capacidades avanzadas para implementar un control de acceso realmente detallado. Espero que hayas encontrado útil esta lección. Gracias por ver.
