@@ -1,0 +1,2 @@
+# Tips para el exámen
+
