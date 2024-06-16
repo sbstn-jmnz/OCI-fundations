@@ -108,4 +108,10 @@ Ahora puede escribir políticas para evitar que los usuarios accedan a recursos 
 
 Esos son los compartimentos. Es una característica única dentro de OCI. Creemos que ayuda a mantener sus arrendamientos mucho mejor organizados. Y realmente es compatible con su jerarquía y diseño de identificación actuales. 
 
+## Dominios de identidad (identity domain)
 
+Al igual que los compartimentos, **los dominios de identidad** son contenedores para sus usuarios, grupos y configuración de seguridad. 
+
+Entonces, la forma en que se usa es, digamos, que tengo un compartimiento sandbox con fines de prueba. Por lo tanto, podría tener una configuración seleccionada de usuarios y grupos que participan en esta prueba y podría mantenerlos en este dominio de identidad también sandbox.
+
+Y una vez que ya no los use, puedo eliminar todos estos subgrupos de usuarios. Es una buena manera de segregar usuarios, grupos y configuración de seguridad.
