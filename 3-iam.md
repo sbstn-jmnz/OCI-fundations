@@ -104,8 +104,6 @@ Ahora puede escribir políticas para evitar que los usuarios accedan a recursos 
 
 **Y luego, finalmente, se podrían establecer cuotas y presupuestos por compartimentos**. Entonces se podría decir que, en mi compartimento particular, no se puede crear una máquina de|metal. O no puede crear un recurso de Exadata. Entonces podrías controlarlo así. Y luego también podrías crear presupuestos para compartimentos. Por lo tanto, se podría decir que, si el uso en un compartimento en particular supera los $1,000, se le marcará y se le notificará. 
 
-[Uploading imagen.png…]()
-
 Esos son los compartimentos. Es una característica única dentro de OCI. Creemos que ayuda a mantener sus arrendamientos mucho mejor organizados. Y realmente es compatible con su jerarquía y diseño de identificación actuales. 
 
 ## Dominios de identidad (identity domain)
@@ -115,3 +113,4 @@ Al igual que los compartimentos, **los dominios de identidad** son contenedores 
 Entonces, la forma en que se usa es, digamos, que tengo un compartimiento sandbox con fines de prueba. Por lo tanto, podría tener una configuración seleccionada de usuarios y grupos que participan en esta prueba y podría mantenerlos en este dominio de identidad también sandbox.
 
 Y una vez que ya no los use, puedo eliminar todos estos subgrupos de usuarios. Es una buena manera de segregar usuarios, grupos y configuración de seguridad.
+|
