@@ -84,3 +84,7 @@ También puedes ir a funciones OCI, que es nuestro servicio sin servidor, y podr
 Se trata de una especie de flujo de trabajo de un extremo a otro sobre cómo funciona Cloud Guard. Mucho de esto es transparente. No lo ves. Y es una excelente manera de detectar problemas automáticamente y solucionarlos.
 
 En resumen, Cloud Guard es un servicio que entra en la categoría de Gestión de la postura de seguridad en la nube. Ayuda a monitorear e identificar posibles problemas de seguridad y luego solucionarlos. También podría solucionar automáticamente estos problemas. 
+
+## Secirity Zones and Security Advisor
+
+Zonas de seguridad y Consejero de Seguridad.
