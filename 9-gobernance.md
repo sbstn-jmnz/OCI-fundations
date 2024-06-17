@@ -45,3 +45,36 @@ Ahora, un par de herramientas más en esta área incluyen límites de servicio, 
 Luego, finalmente, como mencionamos, los compartimentos son estas entidades lógicas, que puede usar para aislar recursos y tener mejor acceso a estos recursos, por lo que si usa estos compartimentos, tiene la posibilidad de configurar cuotas de compartimentos. Y la forma en que funciona es que usted tiene estas diferentes políticas que puede escribir, donde puede establecer la cantidad máxima de recursos de la nube que se pueden usar para un compartimento. Entonces se podría decir que, en este compartimento en particular, solo se pueden usar, digamos, 10 máquinas virtuales. Puede desarmar eso y volver a los límites de servicio predeterminados, o puede ponerlo a cero. Entonces, a modo de ejemplo, se podría decir que este compartimento en particular no debería tener ningún recurso de Exadata. Y podría hacerlo para evitar el uso indebido y también ahorrar costos.
 
 En resumen, esa es su gestión de costos: muchas herramientas disponibles, incluido el presupuesto, incluidos informes de uso, análisis de costos, capacidad para establecer cuotas, capacidad para aumentar sus límites de servicio y mucho más. Debe consultar nuestra documentación para obtener más información sobre todas las formas en que puede administrar sus costos en OCI. Espero que hayas encontrado útil esta lección. Gracias por ver.
+
+
+## Etiquetado
+
+Bienvenido a esta lección sobre etiquetado. El etiquetado es una capacidad muy, muy importante dentro de OCI y definitivamente deberías aprovecharla. Hablemos más sobre ello. Entonces, en esencia, ¿qué es el etiquetado? Las etiquetas son básicamente estos pares de valores clave, que podría utilizar para organizar mejor sus recursos.
+
+Como pueden ver aquí, en este caso en particular, puse dos etiquetas diferentes. Entonces hay una etiqueta que es ambiente con un valor de producción. Y hay otra etiqueta que es proyecto y tiene valor alfa. Y podría hacer varias etiquetas. Siempre debes verificar los límites del servicio en cuanto a cuántas etiquetas puedo colocar en un objeto de la nube en particular. Pero en este caso, pondré dos etiquetas aquí.
+
+Y estos nuevamente, solo para recapitular, son pares clave-valor simples o pares de nombre-valor donde la clave es la clave de la etiqueta, y luego el valor es el valor que desea asignar. Entonces, la idea aquí es que ejecutará cientos o miles de recursos en la nube. Y a medida que crea aplicaciones, crea arquitecturas complejas, puede etiquetarlas. Y podría identificar sus aplicaciones y sus recursos utilizando estas etiquetas.
+
+Esa es la primera razón por la que usarías tus etiquetas, porque tus cuentas y tus recursos... vas a usar muchos, muchos recursos. Y las etiquetas son un mecanismo muy sencillo para organizar mejor sus recursos.
+
+La segunda razón por la que usarías etiquetas sería para la gestión de costos. Ahora imagina todos estos recursos que estás etiquetando, podrías extraerlos por etiqueta. Y podría averiguar cuál es el costo de uso de esos recursos. Y esa es una forma muy importante de determinar cuánto consume su aplicación.
+
+Recuerde que la nube se trata de precios de pago por uso. Y podría identificar el tipo de costo en el que está incurriendo en un conjunto particular de recursos. Entonces, la segunda razón por la que usarías etiquetas es la gestión de costos.
+
+También puedes hacer esto llamado control de acceso basado en etiquetas. Por lo tanto, podría controlar el acceso en función de las etiquetas de los recursos, no de los usuarios y los grupos. **Entonces, en cierto modo, al usar etiquetas, la capacidad de escribir políticas basadas en etiquetas se vuelve aún más poderosa.** Estos son algunos de los casos de uso. y hay muchos, muchos mas. Pero esas son algunas de las razones por las que usarías etiquetas.
+
+Como hablamos en OCI, hay dos tipos de etiquetas. Hay etiquetas de formato libre. Y hay etiquetas definidas. Primero, veamos las etiquetas de formato libre. Como puede ver en el gráfico aquí, hay una clave y un valor. Entonces, para esta etiqueta en particular, la clave es el medio ambiente. El valor es la producción. Es un pagador de valor clave muy simple. No hay un esquema definido. O no existe ningún tipo de restricción de acceso.
+
+Luego hemos definido etiquetas. Y estos tienen más funciones y control. Y lo primero que hay que tener en cuenta aquí, como se puede ver en el gráfico, es que estas etiquetas ahora están contenidas dentro de algo llamado espacio de nombres. Entonces especificas un espacio de nombres que dice, en este caso, son operaciones. Y luego puedes poner tantas etiquetas como quieras en esos espacios de nombres. Entonces estás definiendo un esquema.
+
+Y otra cosa que podría hacer también respalda las políticas. Por lo tanto, defina políticas de soporte de etiquetas para permitirle controlar quién puede aplicar sus etiquetas definidas. Por lo tanto, no todo el mundo podría utilizar estas etiquetas definidas. Podrías escribir eso en la póliza. Y el espacio de nombres de la etiqueta es la entidad a la que aplica esta política. Entonces se podría decir que un grupo particular de administradores de operaciones solo puede aplicar esta etiqueta en particular, porque el espacio de nombres tiene operaciones en eso. Entonces podrías redactar una política contra eso.
+
+Entonces, ¿cómo se ve realmente en la práctica? Como ejemplo aquí, hay un espacio de nombres que son operaciones. Y dentro, estoy definiendo un par clave-valor. Entonces la clave es el medio ambiente y el valor es la producción. Y podrías llevarlo al siguiente nivel. Como puede ver aquí, las operaciones son el espacio de nombres. El medio ambiente es la clave. Y la producción es el valor.
+
+Ahora, como hablamos, el espacio de nombres es un contenedor para un conjunto de etiquetas con definiciones de claves de etiquetas. Las definiciones de claves de etiquetas especifican la clave como está aquí. Y también podría especificar el tipo de valores permitidos. Se podría decir que el tipo es una cadena. Y permite cualquier valor, o está en blanco. O podría establecer un conjunto específico de valores. Y cuando los usuarios aplican esta etiqueta en particular, solo pueden elegir entre esos valores en particular.
+
+Por lo tanto, es otra forma de determinar primero quién aplica la etiqueta escribiendo las políticas. Y luego también puedes especificar qué tipo de valores están permitidos. Entonces, esto realmente es que el esquema definido junto con la política hace que los recursos estén aún mejor organizados.
+
+Una cosa a tener en cuenta es que el espacio de nombres de etiquetas, una vez definido, no se puede eliminar. Pero siempre puedes retirarlos y no tienes que usarlos. Esto es más por motivos de gobernanza. Entonces, independientemente de los espacios de nombres que tenga, puede realizar una auditoría de los espacios de nombres que tenía en su cuenta. Eso es todo.
+
+Etiquetado: una característica muy importante y útil en la nube. Y en OCI, llevamos el etiquetado al siguiente nivel utilizando estas etiquetas definidas. 
