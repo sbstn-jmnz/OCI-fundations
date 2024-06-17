@@ -88,3 +88,27 @@ En resumen, Cloud Guard es un servicio que entra en la categoría de Gestión de
 ## Secirity Zones and Security Advisor
 
 Zonas de seguridad y Consejero de Seguridad.
+
+Bienvenido a esta lección sobre Zonas de seguridad y Asesor de seguridad.
+
+**Zona de seguridad es para configurar una ubicación en la que no se puede desactivar la seguridad**. 
+
+**Security Advisor** es un servicio que unifica **Security Zone, Cloud Guard y algunas otras capacidades en un todo cohesionado**. En esta lección, analizaremos ambos servicios.
+
+Primero, veamos las zonas de seguridad. ¿Qué son las Zonas de Seguridad? Bueno, hablamos de que tienes recursos en tus compartimentos. Como puede ver aquí, tiene dos compartimentos llamados compartimento A y compartimento B. Puede designar el compartimento B como zona de seguridad. ¿Qué significa eso?
+
+Bueno, eso significa que este compartimento en particular, una vez que se le asigna una especie de nomenclatura de Zona de Seguridad, tiene un conjunto de recetas de Zona de Seguridad. Estas no son más que sus políticas que se aplican aquí. Y cada vez que hay una violación de la política, se niega esa operación.
+
+Entonces, ¿cómo se ve eso? ¿Qué servicios son compatibles? Bueno, hoy en día se admiten las primitivas principales, incluidas las redes, el almacenamiento, la computación y las bases de datos. ¿Qué significa eso realmente? Bueno, si especificas que la subred siempre tiene que ser privada, si creas una subred pública, esa operación será denegada. Si las reglas dicen que el cliente administra las claves de cifrado maestras, se deben utilizar en lugar de las claves de cifrado administradas por el proveedor. Y si eso se viola, se denegará la operación.
+
+Entonces la idea es que tomes una parte de tu arrendamiento y pienses en tu propia casa. Tiene los artículos más seguros que tiene, ya sea su pasaporte, documentos, joyas o cualquier otra cosa, puede guardarlos en una bóveda segura. Hágalo a prueba de incendios, etc., para que esté protegido en caso de cualquier tipo de infracción o desastre natural.
+
+Entonces la misma idea se aplica aquí. Al tomar su arrendamiento, no todo en su arrendamiento es súper seguro, pero algunos elementos de su arrendamiento, algunas partes, serán súper seguros. Creas una zona de seguridad. A veces, también se las conoce como zonas de máxima seguridad. Y a los recursos que se mantienen allí se les aplican una especie de políticas, de recetas. Y esas políticas no pueden violarse.
+
+La forma más sencilla de pensar en las zonas de seguridad. El asesor de seguridad es en realidad un servicio combinado que toma la funcionalidad proporcionada por Cloud Guard y Security Zone, así como algunos de los otros servicios de seguridad, y los reúne. En cierto modo, es nuestro propio punto de vista sobre cómo se debe garantizar la seguridad. Los servicios admitidos en la actualidad son el almacenamiento de objetos, el almacenamiento de archivos, el volumen en bloque y las máquinas virtuales.
+
+Y nuevamente, en algunos de los ejemplos de los que hablamos anteriormente, los depósitos no pueden ser públicos. Y eso puede ser aplicado por Security Advisor. El asesor de seguridad le explicará cómo crear un depósito en una zona de seguridad. Y viene con su propio conjunto de requisitos.
+
+Tienes que usar una clave de administración de clientes y así sucesivamente. Entonces, Security Advisor seguiría los pasos necesarios para hacerlo. En una demostración, podemos ver cómo funciona. Y entonces lo entenderás un poco mejor en comparación con simplemente leer las diapositivas.
+
+Sólo para recapitular. Estos dos nuevamente son servicios únicos. Las zonas de seguridad configuran una ubicación en la que no se puede desactivar la seguridad. Security Advisor unifica Security Zone, Cloud Guard u otras capacidades de seguridad en un todo cohesivo. Espero que encuentres útil esta lección. Gracias por ver.
